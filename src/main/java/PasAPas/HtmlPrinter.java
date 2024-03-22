@@ -34,7 +34,7 @@ public class HtmlPrinter {
                     htmlBuilder.append("<p>").append("Population: ").append(planet.getJSONObject("properties").getString("population")).append("</p>");
                     System.out.println(codeHtml);
                     
-//                    // Ajoute les résidents
+                    // Ajoute les résidents
 //                    JSONArray residents = planet.getJSONArray("residents");
 //                    if (residents.length() > 0) {
 //                        htmlBuilder.append("<p>").append("Residents: ").append("</p><ul>");
@@ -43,6 +43,14 @@ public class HtmlPrinter {
 //                        }
 //                        htmlBuilder.append("</ul>");
 //                    }
+	                  JSONArray residents = planet.getJSONArray("residents");
+	                  if (residents.length() > 0) {
+	                      htmlBuilder.append("<p>").append("Residents: ").append("</p><ul>");
+	                      for (int j = 0; j < residents.length(); j++) {
+	                          htmlBuilder.append("<li>").append(residents.getString(j)).append("</li>");
+	                      }
+	                      htmlBuilder.append("</ul>");
+	                  }
 
 //                    // Ajoute les films
 //                    JSONArray films = planet.getJSONArray("films");

@@ -19,10 +19,10 @@ public class Printer {
             System.out.println("Surface water : " + planet.getJSONObject("properties").getString("surface_water"));
             System.out.println("Population : " + planet.getJSONObject("properties").getString("population"));
 
-//            // Impression des résidents de la planète
-//            JSONArray residents = planet.getJSONArray("residents");
-//            System.out.println("\nResidents :");
-//            printArrayValues(residents, "name");
+            // Impression des résidents de la planète
+            JSONArray residents = planet.getJSONArray("residents");
+            System.out.println("\nResidents :");
+            printArrayValues(residents, "name");
 
 //            // Impression des films associés à la planète
 //            JSONArray films = planet.getJSONArray("films");
