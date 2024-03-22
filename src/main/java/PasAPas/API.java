@@ -11,17 +11,17 @@ import org.json.JSONObject;
 public class API {
 
     // URL de base de l'API pour les planètes
-    private static final String PLANETS_API_URL = "https://swapi.tech/api/planets/";
+    private static final String PLANETS_API_URL = "https://swapi.dev/api/planets/";
     
  // URL de base de l'API pour les films
-    private static final String FILMS_API_URL = "https://swapi.tech/api/films/";
+    private static final String FILMS_API_URL = "https://swapi.dev/api/films/";
 
     public JSONObject getPlanets(String searchquery) {
         try {
             // Construction de l'URL de l'API avec la recherche si spécifiée
             String urlString = PLANETS_API_URL;
             if (searchquery != null && !searchquery.isEmpty()) {
-                urlString += "?name=" + searchquery;
+                urlString += "?search=" + searchquery;
             }
             
             System.out.println("searchquery : "+ searchquery);
@@ -60,7 +60,7 @@ public class API {
             // Construction de l'URL de l'API avec la recherche si spécifiée
             String urlString2 = FILMS_API_URL;
             if (searchquery != null && !searchquery.isEmpty()) {
-            	urlString2 += "?title=" + searchquery;
+            	urlString2 += "?search=" + searchquery;
             }
             
             System.out.println("searchquery : "+ searchquery);

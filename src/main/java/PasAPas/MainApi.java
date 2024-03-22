@@ -15,7 +15,7 @@ public class MainApi {
             // Appel à l'API pour récupérer les données des planètes
             JSONObject jsonObject = apiCalls.getPlanets("Alderaan");
             // Extraction des résultats des planètes
-            JSONArray planetresults = jsonObject.getJSONArray("result");
+            JSONArray planetresults = jsonObject.getJSONArray("results");
             
             System.out.println(planetresults);
             // Impression des détails des planètes
@@ -39,7 +39,7 @@ public class MainApi {
             // Appel à l'API pour récupérer les données des planètes
             JSONObject jsonObject2 = apiCalls.getFilms("Hope");
             // Extraction des résultats des planètes
-            JSONArray filmresults = jsonObject2.getJSONArray("result");
+            JSONArray filmresults = jsonObject2.getJSONArray("results");
             
             System.out.println(filmresults);
             // Impression des détails des planètes
